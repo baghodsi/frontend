@@ -1,0 +1,22 @@
+
+.sidebar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: fixed;
+  padding-top: 3px;
+  padding-left: 10px;
+  background-color: rgb(132, 154, 226);
+}
+
+.search{
+  background:transparent; 
+  border:none;
+
+}
+
+h2 {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(132, 154, 226);
+}

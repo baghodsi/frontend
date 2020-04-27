@@ -1,0 +1,50 @@
+<div  class="overlay" style="width: 100%;">
+  <div style="float: left; background-color:#f1f1f1; height: 100%;" [ngStyle]="{'width':sAppTitleList == 0 ? '3%' : '15%' }">
+    <app-top-bar (sInTitleList)="sAppTitleList = $event"></app-top-bar>
+    <app-title-list [bTitleOpenMenu]="sAppTitleList" (nTTitleID)="nAppTitleId = $event" (sTitleText)="nAppTitleText = $event" (click)="closeNav()"></app-title-list>
+  </div>
+  <div style="float: left; background-color: lightblue; height: 100%;" scrolling="yes" [ngStyle]="{'width':sAppTitleList == 0 ? (nAppRecId == 0 ? '97%' : '77%') : (nAppRecId == 0 ? '85%' : '65%')}">
+    <app-search [sSrchTitleText]="nAppTitleText"></app-search>
+    <app-product-list  #child [nRecTitleId]="nAppTitleId" (nRecId)="nAppRecId = $event"></app-product-list>
+  </div>
+  <div id="myNav" style="float: left; background-color: #f1f1f1; height: 100%;" [ngStyle]="{'width':nAppRecId == 0 ? '0%' : '20%'}">
+    <a class="closebtn" (click)="closeNav();" [ngStyle]="{'display':nAppRecId == 0 ? 'none' : 'block' }">&times;</a>
+    <app-product-dtl [nDtlRecId]="nAppRecId" [nDtlTitleId]="nAppTitleId" (nDtlRecOutId)="nAppRecId" (onChanged)="onChanged($event)"></app-product-dtl>
+  </div>
+</div>
+
+<button mat-raised-button (click)="openModal()">Pick one11</button>
+
+<!--
+<div  class="overlay" style="width: 100%;">
+  <div style="float: left; background-color:#f1f1f1; height: 100%;" [ngStyle]="{'width':sAppTitleList == 0 ? '3%' : '15%' }">
+    <app-top-bar (sInTitleList)="sAppTitleList = $event"></app-top-bar>
+    <app-title-list [bTitleOpenMenu]="sAppTitleList" (nTTitleID)="nAppTitleId = $event" (sTitleText)="nAppTitleText = $event" (click)="closeNav()"></app-title-list>
+  </div>
+  <div style="float: left; background-color: lightblue; height: 100%;" scrolling="yes" [ngStyle]="{'width':sAppTitleList == 0 ? (nAppRecId == 0 ? '97%' : '77%') : (nAppRecId == 0 ? '85%' : '65%')}">
+    <app-search [sSrchTitleText]="nAppTitleText"></app-search>
+    <app-product-list  [nRecTitleId]="nAppTitleId" (nRecId)="nAppRecId = $event" ></app-product-list>
+  </div>
+  <div id="myNav" style="float: left; background-color: #9ce3f8; height: 100%;" [ngStyle]="{'width':nAppRecId == 0 ? '0%' : '20%'}">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()" [ngStyle]="{'display':nAppRecId == 0 ? 'none' : 'block' }">&times;</a>
+    <app-product-dtl [nDtlRecId]="nAppRecId"></app-product-dtl>
+  </div>
+</div>
+
+    <app-heroes></app-heroes>
+
+<div  class="overlay" style="width: 100%;">
+  <div style="float: left; background-color:#f1f1f1; height: 100%;" [ngStyle]="{'width':sAppTitleList == 0 ? '3%' : '15%' }">
+    <app-top-bar (sInTitleList)="sAppTitleList = $event"></app-top-bar>
+    <app-title-list [bTitleOpenMenu]="sAppTitleList" (nTTitleID)="nAppTitleId = $event" (sTitleText)="nAppTitleText = $event" (click)="closeNav()"></app-title-list>
+  </div>
+  <div style="float: left; background-color: lightblue; height: 100%;" scrolling="yes" [ngStyle]="{'width':sAppTitleList == 0 ? (nAppRecId == 0 ? '97%' : '77%') : (nAppRecId == 0 ? '85%' : '65%')}">
+    <app-search [sSrchTitleText]="nAppTitleText"></app-search>
+    <app-product-list  [nRecTitleId]="nAppTitleId" (nRecId)="nAppRecId = $event" ></app-product-list>
+  </div>
+  <div id="myNav" style="float: left; background-color: #9ce3f8; height: 100%;" [ngStyle]="{'width':nAppRecId == 0 ? '0%' : '20%'}">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()" [ngStyle]="{'display':nAppRecId == 0 ? 'none' : 'block' }">&times;</a>
+    <app-product-dtl [nDtlRecId]="nAppRecId"></app-product-dtl>
+</div>
+</div>
+-->

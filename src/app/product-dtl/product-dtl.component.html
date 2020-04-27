@@ -1,0 +1,34 @@
+  <div>
+      <div class="detail">
+        <label for="fname">Id</label>
+        <input type="text" style="width: 100%" id="heroId" placeholder="Id.." [(ngModel)]="hero.id" disabled="true">
+        <label for="lname">Name</label>
+        <input type="text" style="width: 100%" required [(ngModel)]="hero.name" placeholder="Your name..">
+        <label for="lname">Age</label>
+        <input type="text" style="width: 100%" id="heroAge" required [(ngModel)]="hero.age" placeholder="Your age..">
+        <label for="lname">Card Id</label>
+        <input type="text" style="width: 100%" id="heroCardId" required [(ngModel)]="hero.cardId" placeholder="Your card id..">
+        
+        <label for="subject">Description</label>
+        <textarea id="subject" name="subject" required [(ngModel)]="hero.description" placeholder="Write something.." style="height:120px; width: 100%"></textarea>
+        <br><input type="submit" value="Submit" (click)="save();">
+      </div>
+  </div>
+
+
+<!--            
+<div id="heroDtl" class="borderDtl" *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(value)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save(); ">save</button>
+</div>
+
+        
+
+        -->

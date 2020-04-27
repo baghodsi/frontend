@@ -1,0 +1,15 @@
+.detail {
+  margin-top: 26px;
+  padding: 40px;
+  
+}
+.detail input{
+  padding: 6px;
+  margin: 4px;
+  border-color: aqua;
+}
+.detail textarea{
+  padding: 6px;
+  margin: 4px;
+  border-color: aqua;
+}

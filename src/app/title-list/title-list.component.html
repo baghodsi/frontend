@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div *ngIf="bTitleOpenMenu" class="sidebar">
+  <table style="width: 100%;">
+    <tr (click)="setTitleList('10001', 'Index')"><td><a ><i class="fa fa-fw fa-list"></i> Index</a></td>
+      <td><a style="float:right;"> 6</a></td></tr>
+    <tr><td><a (click)="setTitleList('10002', 'Assigned to me')"><i class="fa fa-fw fa-user"></i> AssignedToMe</a></td>
+      <td><a style="float:right;"> 4</a></td></tr>
+    <tr><td><a (click)="setTitleList('10003', 'Important')"><i class="fa fa-fw fa-bell"></i> Important</a></td>
+      <td><a style="float:right;"> 0</a></td></tr>
+    <tr><td><a (click)="setTitleList('10004', 'Today')"><i class="fa fa-fw fa-check-square"></i> Today</a></td>
+      <td><a style="float:right;"> 0</a></td></tr>
+    <tr><td><a (click)="setTitleList('10005', 'Week')"><i class="fa fa-fw fa-calendar"></i> Week</a></td>
+      <td><a style="float:right;"> 0</a></td></tr>
+  </table>
+</div>
+
+<div *ngIf="!bTitleOpenMenu" class="sidebar">
+  <table style="width: 100%;">
+    <tr><td><a (click)="setTitleList('10001', 'Index')"><i class="fa fa-fw fa-list"></i></a></td></tr>
+    <tr><td><a (click)="setTitleList('10002', 'Assigned to me')"><i class="fa fa-fw fa-user"></i></a></td></tr>
+    <tr><td><a (click)="setTitleList('10003', 'Important')"><i class="fa fa-fw fa-bell"></i></a></td></tr>
+    <tr><td><a (click)="setTitleList('10004', 'Today')"><i class="fa fa-fw fa-check-square"></i></a></td></tr>
+    <tr><td><a (click)="setTitleList('10005', 'Week')"><i class="fa fa-fw fa-calendar"></i></a></td></tr>
+  </table>
+</div>
